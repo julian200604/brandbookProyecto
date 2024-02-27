@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+.logo  {
+    position: relative;
+}
+
+.logo-tienda {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 70px;
+}
+  
+.contenedor {
+    display: flex;
+    flex-wrap: wrap; /*se aplica al contenedor para asegurarse de que las películas se envuelvan en múltiples líneas si el espacio horizontal disponible no es suficiente para mostrar todas las películas en una sola fila. */
+    justify-content: center;
+}
+  
+.cuadro {
+    width: 250px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*se agrega un efecto sombra en los bordes del cuadro*/
+    overflow: hidden; /*esta propiedad sirve para asegurarse de que cualquier contenido que sobresalga 
+                        del contenedor (en este caso, la descripción de la película) no se muestre fuera 
+                        de los límites del contenedor y se recorte de manera limpia y ordenada*/
+}
+  
+.cuadro img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+  
+.descripcion {
+    padding: 10px;
+}
+  
+.descripcion h2 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+  
+.descripcion p {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+  
+/* Media Queries */
+@media (max-width: 768px) {
+    .contenedor {
+      justify-content: space-around;
+    }
+    .cuadro {
+      width: 45%;
+    }
+}
+  
+@media (max-width: 480px) {
+    .cuadro {
+      width: 90%;
+    }
+    .descripcion {
+      display: none;
+    }
+} 
