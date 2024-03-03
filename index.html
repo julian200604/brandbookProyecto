@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Web</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-     <header>
+    <header id="HEADER">
       <div class="header">
         <div class="logo">
           <img src="img/logo.jpg" alt="Logo">
           <span class="logo-text">V-Pharma</span>
         </div>
-        <div class="menu">
-          <ul>
-            <li><a href="#PERSONALIDAD DE MARCA">Personalidad de marca</a></li>
-            <li><a href="#PUBLICO OBJETIVO">Publico objetivo</a></li>
-            <li><a href="#LOGOTIPO-PALETA DE COLORES">Logotipo-Paleta de colores</a></li>
-            <li><a href="">Tipografía</a></li>
-            <li><a href="">Imágenes y gráficos</a></li>
-            <li><a href="">Redes sociales</a></li>
-          </ul>
-        </div>
+        <button id="abrir" class="abrir-menu "><i class="bi bi-list"></i></button> <!--Se crea este boton para abrir el menu-->
+        <nav class="nav" id="nav">
+          <button id="cerrar" class="cerrar-menu"><i class="bi bi-x"></i></button> <!--Se crea este boton para cerrar el menu-->
+            <ul class="nav-list">
+              <li><a href="#PERSONALIDAD DE MARCA">Personalidad de marca</a></li>
+              <li><a href="#PUBLICO OBJETIVO">Publico objetivo</a></li>
+              <li><a href="#LOGOTIPO-PALETA DE COLORES">Logotipo-Paleta de colores</a></li>
+              <li><a href="#TIPOGRAFÍA">Tipografía</a></li>
+              <li><a href="#IMÁGENES Y GRÁFICOS">Imágenes y gráficos</a></li>
+              <li><a href="#REDES SOCIALES">Redes sociales</a></li>
+            </ul>
+        </nav>
       </div>
+
       <div class="divider"></div>
-     </header>
+    </header>
+
     <main>
       <div class="contenedor">
         <div class="cuadro">
@@ -95,7 +100,7 @@
 
       <div id="PUBLICO OBJETIVO">
         <h2>PUBLICO OBJETIVO</h2>
-        </div>
+      </div>
 
       <div class="contenedor">
         <div class="cuadro">
@@ -156,7 +161,7 @@
 
       <div id="LOGOTIPO-PALETA DE COLORES">
         <h2>LOGOTIPO - PALETA DE COLORES</h2>
-        </div>
+      </div>
 
       <div class="contenedor">
         <div class="cuadro">
@@ -172,7 +177,100 @@
           </div>
         </div>
       </div>
-    </main>
+      
+      <div id="TIPOGRAFÍA">
+        <h2>TIPOGRAFÍA</h2>
+      </div>
 
+      <div class="contenedor">
+        <div class="cuadro">
+          <img src="img/Poppins.jpg" alt="letra1">
+          <div class="descripcion">
+            <h2>Poppins</h2>
+          </div>
+        </div>
+        <div class="cuadro">
+          <img src="img/ubuntu.jpeg" alt="letra2">
+          <div class="descripcion">
+            <h2>ubuntu</h2>
+          </div>
+        </div>
+      </div>
+
+      <div id="IMÁGENES Y GRÁFICOS">
+        <h2>IMÁGENES Y GRÁFICOS</h2>
+      </div>
+
+      <div class="contenedor">
+        <div class="cuadro">
+          <img src="img/metodo-de-pago.png" alt="pago">
+          <div class="descripcion">
+            <h2>Pago</h2>
+          </div>
+        </div>
+        <div class="cuadro">
+          <img src="img/menu (1).png" alt="menu">
+          <div class="descripcion">
+            <h2>Menu</h2>
+          </div>
+        </div>
+        <div class="cuadro">
+          <img src="img/carrito-de-compras.png" alt="carrito">
+          <div class="descripcion">
+            <h2>Carrito de compra</h2>
+          </div>
+        </div>
+        <div class="cuadro">
+          <img src="img/menu.png" alt="catalogo">
+          <div class="descripcion">
+            <h2>Catalogo</h2>
+          </div>
+        </div>
+        <div class="cuadro">
+          <img src="img/editar.png" alt="editar">
+          <div class="descripcion">
+            <h2>Editar</h2>
+          </div>
+        </div>
+        <div class="cuadro">
+          <img src="img/usuario-de-perfil.png" alt="Cuenta">
+          <div class="descripcion">
+            <h2>Cuenta</h2>
+          </div>
+        </div>
+        <div class="cuadro">
+          <img src="img/lupa.png" alt="Buscar">
+          <div class="descripcion">
+            <h2>Buscar</h2>
+          </div>
+        </div>
+      </div>
+
+      <div id="REDES SOCIALES">
+        <h2>REDES SOCIALES</h2>
+      </div>
+
+      <div class="contenedor">
+        <div class="cuadro">
+          <img src="img/facebook.png" alt="Facebook">
+          <div class="descripcion">
+            <h2>Facebook</h2>
+          </div>
+        </div>
+        <div class="cuadro">
+          <img src="img/instagram.png" alt="Instagram">
+          <div class="descripcion">
+            <h2>Instagram</h2>
+          </div>
+        </div>
+        <div class="cuadro">
+          <img src="img/whatsapp.png" alt="WhatsAPP">
+          <div class="descripcion">
+            <h2>WhatsAPP</h2>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
 </body>
 </html>

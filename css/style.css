@@ -1,3 +1,5 @@
+/* General*/
+
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
@@ -16,6 +18,8 @@ h2 {
     font-size: 18px;
     font-weight: bold;
 }
+
+/*menu - logo*/
   
 .header {
     display: flex; /* Usa el modelo de caja flexible para el header */
@@ -62,6 +66,29 @@ h2 {
     text-align: center;
 
 }
+
+/* Hamburger menu */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.abrir-menu,
+.cerrar-menu {
+        display: none;
+}
+
+
+/* Línea divisora */
   
 .divider {
     height: 1px; /* Establece la altura de la línea divisoria */
@@ -70,10 +97,12 @@ h2 {
     width: 95%; /* Establece el ancho de la línea divisora */
 
 }
+
+/* Cuadros con la información */
   
 .contenedor {
     display: flex;
-    flex-wrap: wrap; /*se aplica al contenedor para asegurarse de que las películas se envuelvan en múltiples líneas si el espacio horizontal disponible no es suficiente para mostrar todas las películas en una sola fila. */
+    flex-wrap: wrap; /*se aplica al contenedor para asegurarse de se envuelvan en múltiples líneas si el espacio horizontal disponible no es suficiente */
     justify-content: center;
     
 }
@@ -83,9 +112,7 @@ h2 {
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*se agrega un efecto sombra en los bordes del cuadro*/
-    overflow: hidden; /*esta propiedad sirve para asegurarse de que cualquier contenido que sobresalga 
-                        del contenedor (en este caso, la descripción de la película) no se muestre fuera 
-                        de los límites del contenedor y se recorte de manera limpia y ordenada*/
+    overflow: hidden; /*esta propiedad sirve para asegurarse de que cualquier contenido que sobresalga del contenedor no se muestre fuera de los límites del contenedor y se recorte de manera limpia y ordenada*/
     margin-bottom: 70px;
 }
   
@@ -111,28 +138,63 @@ h2 {
     font-weight: normal;
 }
 
-h2 {
+.volver {
+    color: black; /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
     text-align: center;
-    font-size: 18px;
-    font-weight: bold;
 }
 
-  
 /* Media Queries */
-@media (max-width: 768px) {
-    .contenedor {
-      justify-content: space-around;
-    }
+
+@media (max-width: 1000px) {
     .cuadro {
-      width: 45%;
+      width: 40%;
     }
-}
-  
-@media (max-width: 480px) {
-    .cuadro {
-      width: 90%;
+    
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 2rem;
+        background-color: transparent;
+        cursor: pointer;
     }
-    .descripcion {
-      display: none;
+
+    .abrir-menu {
+        color: #1c1c1c;
     }
-} 
+
+    .cerrar-menu {
+        color: #ececec;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end; /*Se pone para alinear el boton cerrar hacia la derecha*/
+        gap: 1rem; /*Separa el boton cerrar de la lista*/
+        position:absolute;
+        top: 0;
+        right: 0;  
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5); /*le da opacidad cuando se abre el menu*/
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: end; /*se pone la lista en forma de columa y se alinean hacia la derecha*/
+    }
+
+    .nav-list li a{
+        color: #ececec;
+    }
+}  
